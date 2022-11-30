@@ -67,7 +67,9 @@ function Table({ entities, propsPageSize }: InputProps) {
             <td>{user.name}</td>
             <td>{user.gender}</td>
             <td>{user.country}</td>
-            <td>{user.dob}</td>
+            <td>
+              {new Date(user.dob.toString()).toLocaleString().split(",")[0]}
+            </td>
             <td>{user.email}</td>
             <td>{user.phone}</td>
           </tr>
